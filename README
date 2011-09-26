@@ -1,0 +1,22 @@
+ArduScan
+Sept 2011 by Bill Westfield ("WestfW")
+
+Scan a windows system and try to figure out which COM ports
+look like they might be Arduinos.
+
+This is based on the article here:
+  http://www.codeproject.com/KB/system/serial_portsenum_fifo.aspx
+by Vladimir Afanasyev, which explains how to use the device manager
+API to enumerate all the COM ports on a system, and
+these forum entries:
+  http://www.microchip.com/forums/tm.aspx?high=&m=559736&mpage=1#560699
+  http://www.microchip.com/forums/tm.aspx?high=&m=364903&mpage=1#365029
+Which explain how to get the USB Vendor/Product info from the same api.
+
+Currently this is set up to run in a CMD or other shell window, and
+writes its findings to stdout.
+
+
+It should compile fine under cygin, including mingw versions:
+
+  g++ -mno-cygwin ArduScan.cpp -lsetupapi -o ArduScan.exe
