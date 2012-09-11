@@ -17,6 +17,6 @@ Currently this is set up to run in a CMD or other shell window, and
 writes its findings to stdout.
 
 
-It should compile fine under cygin, including mingw versions:
+It should compile fine under cygwin, including mingw versions:
 
   g++ -mno-cygwin ArduScan.cpp -lsetupapi -o ArduScan.exe
